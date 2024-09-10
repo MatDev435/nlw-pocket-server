@@ -10,10 +10,13 @@ importers:
     dependencies:
       drizzle-orm:
         specifier: ^0.33.0
-        version: 0.33.0
+        version: 0.33.0(postgres@3.4.4)
       fastify:
         specifier: ^4.28.1
         version: 4.28.1
+      postgres:
+        specifier: ^3.4.4
+        version: 3.4.4
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -783,6 +786,10 @@ packages:
     resolution: {integrity: sha512-nbkQb5+9YPhQRz/BeQmrWpEknAaqjpAqRK8NwJpmrX/JHu7JuZC5G1CeAwJDJfGes4h+YihC6in3Q2nGb+Y09w==}
     hasBin: true
 
+  postgres@3.4.4:
+    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+    engines: {node: '>=12'}
+
   process-warning@3.0.0:
     resolution: {integrity: sha512-mqn0kFRl0EoqhnL0GQ0veqFHyIN1yig9RHh/InzORTUiZHFRAur+aMtRkELNwGs9aNwKS6tg/An4NYBPGwvtzQ==}
 
@@ -1215,7 +1222,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.33.0: {}
+  drizzle-orm@0.33.0(postgres@3.4.4):
+    optionalDependencies:
+      postgres: 3.4.4
 
   esbuild-register@3.6.0(esbuild@0.19.12):
     dependencies:
@@ -1410,6 +1419,8 @@ snapshots:
       safe-stable-stringify: 2.5.0
       sonic-boom: 4.1.0
       thread-stream: 3.1.0
+
+  postgres@3.4.4: {}
 
   process-warning@3.0.0: {}
 
