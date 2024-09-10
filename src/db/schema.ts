@@ -1,5 +1,6 @@
 import { pgTable, text, integer, timestamp } from 'drizzle-orm/pg-core'
 import { createId } from '@paralleldrive/cuid2'
+import { InferModel } from 'drizzle-orm'
 
 export const goals = pgTable('goals', {
   id: text('id')
