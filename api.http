@@ -1,0 +1,20 @@
+POST http://localhost:3333/goals
+Content-Type: application/json
+
+{
+    "title": "Ir na academia",
+    "desiredWeeklyFrequency": 4
+}
+
+###
+
+POST http://localhost:3333/completions
+Content-Type: application/json
+
+{
+    "goalId": "i56767yqy5k7odokx4ag2v4q"
+}
+
+###
+
+GET http://localhost:3333/pending-goals
