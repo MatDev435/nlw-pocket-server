@@ -18,3 +18,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3333/pending-goals
+
+###
+
+GET http://localhost:3333/summary
